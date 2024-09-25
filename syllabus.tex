@@ -11,7 +11,7 @@
     pdffitwindow=false,     % window fit to page when opened
     pdfstartview={XYZ null null 1.00},    % disable zoom
     pdftitle={Problem Solving and Computer Programming Syllabus},    % title
-    pdfauthor={Richard Zak},     % author
+    pdfauthor={Joshua Massey},     % author
     pdfsubject={UMBC CMSC104 Problem Solving and Computer Programming},   % subject of the document
     pdfkeywords={Computer Science, Programming, Problem Solving, CSEE}, % list of keywords
     pdfnewwindow=true,      % links in new PDF window
@@ -41,17 +41,26 @@ December\fi \ \number \year}
 \renewcommand{\headrulewidth}{0pt} % Remove default underline from header package
 % \rhead{CMSC 104 Section 01: Problem Solving and Computer Programming}
 % \lhead{\begin{picture}(0,0) \put(-65,-8){\includegraphics[width=1.1cm]{Images/UMBC-vertical}} \end{picture}}
+% \cfoot{\thepage}
+% \rfoot{\input{semester}}
+% \lfoot{CMSC 104 (Section 01)}
 \fancyhead[L]{
     \makebox[\textwidth][s]{
         \begin{picture}(0,15){\includegraphics[height=0.375in]{Images/UMBC-primary-logo-RGB.png}}
         \end{picture}
-        \hspace{1.5cm} % Adjust space between image and text as needed
-        CMSC 104 Section 01:\\\\Problem Solving and Computer Programming
+        \hspace{9.25cm} % Adjust space between image and text as needed
+        \shortstack[r]{CMSC 104 (Section 01): \\Problem Solving and Computer Programming}
     }
 }
-\cfoot{\thepage}
-\rfoot{\input{semester}}
-\lfoot{CMSC 104 Section 01}
+\fancyfoot[C]{
+    \makebox[\textwidth][s]{
+        \thepage
+        \hspace{5cm}
+        \input{semester}
+        \hspace{5cm}
+        CMSC 104 (Section 01)
+    }
+}
 %\AtEndDocument{\vfill \LaTeX \hfill}
 \AtEndDocument{\hfill \vfill Last modified: \today}
 
@@ -59,17 +68,17 @@ December\fi \ \number \year}
 
 \textbf{Semester:} \input{semester}\\
 \textbf{Location:} Engineering 122A \\
-\textbf{Time:} Mondays \& Wednesdays 5:30 -- 6:45 \\
-\textbf{Instructor:} Richard Zak \\
-\textbf{Email:} \href{mailto:richard.zak@umbc.edu?Subject=CMSC104}{richard.zak@umbc.edu} \\
-\textbf{Teaching Fellow:} Marcus Davis \\
-\textbf{Email:} \href{mailto:marcusd2@umbc.edu?Subject=CMSC104}{marcusd2@umbc.edu}
+\textbf{Time:} Tuesdays \& Thursdays 5:30 PM -- 6:45 PM \\\\
+\textbf{Instructor:} Joshua E. Massey \\
+\textbf{Email:} \href{mailto:joshua.massey@umbc.edu?Subject=[CMSC 104]}{joshua.massey@umbc.edu} \\
+\textbf{Teaching Fellow:} TBD \\
+% \textbf{Email:} \href{mailto:marcusd2@umbc.edu?Subject=CMSC104}{marcusd2@umbc.edu}
 
-\section*{Day/Hours Available}
+\subsection*{Office Hours}
 \begin{itemize}
 \item Approximately 30 minutes prior to class, if planned ahead.
-\item At least 30 minutes after class, possibly longer.
-\item Virtual meeting Tu/Th by appointment. Schedule via email, or at \url{https://calendly.com/rjzak/meeting}.
+\item At least 30 minutes after class, possibly longer on Tuesdays.
+\item Virtual meeting by appointment. Schedule via email.
 \item In Email: Anytime, and I will respond within 48 hours.
 \end{itemize}
 
@@ -91,7 +100,7 @@ The following is a list of the topics that will be covered:
 \begin{itemize}
     \item explain the implications of basic concepts of computer organization and architecture on program design and implementation;
     \item design basic and intermediate programs to solve problems using fundamental programming constructs (variables, loops, branching, functions);
-    \item implement Python programs from designs using a development environment (Google Colab \url{https://colab.research.google.com/});
+    \item implement Python programs from designs using a development environment (Google Colab -- \url{https://colab.research.google.com/});
     \item describe how data is represented in memory and the relationship of these representations to Python variable types;
     \item explain the concept of an object and use objects \& functions from libraries, including the graphics, file access, and string formatting libraries;
     \item describe the concept of an algorithm and be able to design simple algorithms, including recursive algorithms;
@@ -115,7 +124,7 @@ The following is a list of the topics that will be covered:
 \section*{Course Work}\label{sec:coursework}
 \paragraph{Attendance}It is important to be present for each class, though it's up to each individual student to best manage their own time. This is your time to have regular interaction with the instructor and Teaching Fellow, to ask questions, ask for specific examples, seek clarification, etc. I cannot overstate the importance of being able to ask questions and engage in dialog to help facilitate the learning process. \textbf{The students who end up being the most successful are the ones who regularly attend \underline{and} ask questions!}
 
-\paragraph{Software}If you're using a Windows computer, you'll need to download and install Python from \href{https://www.python.org/downloads/windows/}{python.org}. If you have a Mac, Python is already installed, but you may want to install a newer version from \href{https://www.python.org/downloads/macos/}{python.org}. In both cases, make sure to install ``IDLE''. Additionally, you may wish to install PyCharm Community Edition from \url{https://www.jetbrains.com/pycharm/}. Both a free.
+\paragraph{Software}If you're using a Windows computer, you'll need to download and install Python from \href{https://www.python.org/downloads/windows/}{python.org}. If you have a Mac, Python is already installed, but you may want to install a newer version from \href{https://www.python.org/downloads/macos/}{python.org}. In both cases, make sure to install ``IDLE''. Additionally, you may wish to install PyCharm Community Edition from \url{https://www.jetbrains.com/pycharm/}. Both are free.
 
 \paragraph{}A third option is to use Google Colabatory, available at \url{https://colab.research.google.com/} which doesn't require software installation.
 
@@ -127,7 +136,7 @@ The following is a list of the topics that will be covered:
 \paragraph{LockDown Browser}This course uses the LockDown Browser for the quizzes and final exam. Watch this short video to get a basic understanding of LockDown Browser \url{http://www.respondus.com/products/lockdown-browser/student-movie.shtml}. Then download and install LockDown Browser from this link: \url{http://www.respondus.com/lockdown/download.php?id=978442813}. NOTE: This link is unique for UMBC. It cannot be used by non-UMBC students or websites outside of our campus. To take an online test, start LockDown Browser and navigate to the exam. You won't be able to access the exam with a standard web browser. For additional details on using LockDown Browser, review this FAQ \url{https://wiki.umbc.edu/x/BQb9Aw} or the Respondus Student Quick Start Guide (PDF) \url{http://respondus.com/products/lockdown-browser/guides.shtml#student}. Finally, when taking an online exam, follow these guidelines:
 \begin{itemize}
 \item Before starting the test, know how much time is available for it, and that you've allotted sufficient time to complete it;
-\item Turn off all mobile devices, phones, etc. and don't have them within reach;
+\item Turn off all mobile devices, phones, etc. and place them in your bag, in the space designated by your instructor;
 \item Remain at your desk or workstation for the duration of the quiz or exam;
 \item LockDown Browser will prevent you from accessing other websites or applications; you will be unable to exit the test until all questions are completed and submitted.
 \end{itemize}
@@ -161,47 +170,49 @@ $<$60\%      & F &
 \item If you can another student happen to use the same site and don't cite, that will be interpreted as cheating and a zero will be given for the assignment
 \end{itemize}
 
-\paragraph{ChatGPT}Do not use ChatGPT for your assignments. This doesn't help you learn, and ChatGPT has been known to give incorrect responses. You learn by doing, making mistakes, figuring out how to fix the mistakes, and repeating. Being given potential incorrect answers is not learning. If you need help with the course material, please ask questions!
+\paragraph{Use of Generative Artificial Intelligence}You are strongly advised against using generative AI tools (like ChatGPT) in the course and generative AI use is prohibited in all assignments. This doesn't help you learn, and these tools (including ChatGPT) have been known to give incorrect responses. You learn by doing, making mistakes, figuring out how to fix the mistakes, and repeating. Being given potential incorrect answers is not learning. If you need help with the course material, please ask questions!
 
-\section*{Schedule}\label{sec:schedule}
+\newpage
+
+\section*{* Tentative Schedule *}\label{sec:schedule}
 \textit{Note: The schedule is subject to change. However, any changes will be thoroughly discussed and well disseminated. Please read the chapter \underline{before} class starts.}
 
 % Fall schedule
 \small
 \begin{tabular}{c c l l l c}
 Date    & Week & ~~~~~~~~~~~~Topic & Textbook & Code to Joy & Assignment \\ \hline
-W Aug 28  & 1  & Introduction, Syllabus Review & & & \hl{Quiz 0} \\ \hline
-M Sept 2  & 2  & Computers and Programs & 1 & & \\
-W Sept 4  & 2  & Computers and Programs & & 1 & Classwork 1 \\
-M Sept 9  & 3  & Writing Simple Programs & 2 & & \\
-W Sept 11 & 3  & Writing Simple Programs & & 2, 5 & Classwork 2 \\
-M Sept 16 & 4  & Computing with Numbers & 3 & & Project 1\\
-W Sept 18 & 4  & Computing with Numbers & & & Classwork 3 \\
-M Sept 23 & 5  & Objects and Graphics & 4 & & \\
-W Sept 25 & 5  & \hl{Quiz 1} & & & \\
-M Sept 30 & 6  & Sequences & 5 & & \\ \hline
-W Oct 2   & 6  & Sequences & & 3 & Classwork 4 \\
-M Oct 7   & 7  & Defining Functions & 6 & & Project 2\\
-W Oct 9   & 7  & Defining Functions & & 7 & Classwork 5 \\
-M Oct 14  & 8  & Decision Structures & 7 & & \\
-W Oct 16  & 8  & \hl{Quiz 2} & & 4 & \\
-M Oct 21  & 9  & Loops \& Booleans & 8 & & \\
-W Oct 23  & 9  & Loops \& Booleans & & 6 & Classwork 6 \\
-M Oct 28  & 10 & Simulation \& Design & 9 & & \\
-W Oct 30  & 10 & Simulation \& Design & & & Classwork 7 \\ \hline
-M Nov 4   & 11 & Defining Classes & 10 & & Project 3\\
-W Nov 6   & 11 & \hl{Quiz 3} & & & \\
-M Nov 11  & 12 & Defining Classes & & & \\
-W Nov 13  & 12 & Data Collections & 11 & &  \\
-M Nov 18  & 13 & Data Collections & & 8 & Classwork 8\\
-W Nov 20  & 13 & Object Oriented Design & 12 & & \\
-M Nov 25  & 14 & Object Oriented Design & & & Classwork 9 \\
-W Nov 27  & 14 & \hl{Quiz 4} & & & \\ \hline
-M Dec 2   & 15 & Algorithm Design \& Recursion & 13 & & \\
-W Dec 4   & 15 & Algorithm Design \& Recursion & & 9 & Classwork 10 \\
-M Dec 9   & 16 & Review & & & \\
-W Dec 11  & 16 & \hl{Study Day, no class} & & & \\
-M Dec 16  & 17 & \hl{Final Exam? TBD.} & & & \\
+Th Aug 29  & 1  & Introduction, Syllabus Review & & & \sout{Quiz 0} \\ \hline
+Tu Sept 3  & 2  & Computers and Programs & 1 & & \\
+Th Sept 5  & 2  & Computers and Programs & & 1 & Classwork 1 \\
+Tu Sept 10  & 3  & Writing Simple Programs & 2 & & \\
+Th Sept 12 & 3  & Writing Simple Programs & & 2, 5 & Classwork 2 \\
+Tu Sept 17 & 4  & Computing with Numbers & 3 & & Project 1\\
+Th Sept 19 & 4  & Computing with Numbers & & & Classwork 3 \\
+Tu Sept 24 & 5  & Objects and Graphics & 4 & & \\
+Th Sept 26 & 5  & \hl{Quiz 1} & & & \\ \hline
+Tu Oct 1 & 6  & Sequences & 5 & & \\
+Th Oct 3   & 6  & Sequences & & 3 & Classwork 4 \\
+Tu Oct 8   & 7  & Defining Functions & 6 & & Project 2\\
+Th Oct 10   & 7  & Defining Functions & & 7 & Classwork 5 \\
+Tu Oct 15  & 8  & Decision Structures & 7 & & \\
+Th Oct 17  & 8  & \hl{Quiz 2} & & 4 & \\
+Tu Oct 22  & 9  & Loops \& Booleans & 8 & & \\
+Th Oct 24  & 9  & Loops \& Booleans & & 6 & Classwork 6 \\
+Tu Oct 29  & 10 & Simulation \& Design & 9 & & \\
+Th Oct 31  & 10 & Simulation \& Design & & & Classwork 7 \\ \hline
+Tu Nov 5   & 11 & Defining Classes & 10 & & Project 3\\
+Th Nov 7   & 11 & \hl{Quiz 3} & & & \\
+Tu Nov 12  & 12 & Defining Classes & & & \\
+Th Nov 14  & 12 & Data Collections & 11 & &  \\
+Tu Nov 19  & 13 & Data Collections & & 8 & Classwork 8\\
+Th Nov 21  & 13 & Object Oriented Design & 12 & & \\
+Tu Nov 26  & 14 & Object Oriented Design & & & Classwork 9 \\
+% Th Nov 27  & 14 & \hl{Quiz 4} & & & \\ \hline
+           &    & \hl{Quiz 4} & & & \\ \hline
+Tu Dec 3   & 15 & Algorithm Design \& Recursion & 13 & & \\
+Tu Dec 5   & 15 & Algorithm Design \& Recursion & & 9 & Classwork 10 \\
+Tu Dec 10   & 16 & Review & & & \\
+Tu Dec 17  & 17 & \hl{Final Exam, 6:00 PM - 8:00 PM (Tentative)} & & & \\
 \end{tabular}
 
 % Spring schedule goes here
@@ -209,7 +220,7 @@ M Dec 16  & 17 & \hl{Final Exam? TBD.} & & & \\
 \section*{Accessibility \& Disability Accommodations, Guidance \& Resources}
 \paragraph{}Accommodations for students with disabilities are provided for all students with a qualified disability under the Americans with Disabilities Act (ADA \& ADAAA) and Section 504 of the Rehabilitation Act who request and are eligible for accommodations. The Office of Student Disability Services (SDS) is the UMBC department designated to coordinate accommodations that creates equal access for students when barriers to participation exist in University courses, programs, or activities.
 
-\paragraph{}If you have a documented disability and need to request academic accommodations in your courses, please refer to the SDS website at \url{http://sds.umbc.edu} for registration information and office procedures.
+\paragraph{}If you have a documented disability and need to request academic accommodations in your courses, please refer to the SDS website at \url{sds.umbc.edu} for registration information and office procedures.
 \begin{itemize}
 \item SDS email: \href{mailto:disAbility@umbc.edu}{disAbility@umbc.edu}
 \item SDS phone: \href{tel:+14104552459}{(410) 455-2459}
@@ -217,30 +228,61 @@ M Dec 16  & 17 & \hl{Final Exam? TBD.} & & & \\
 If you will be using SDS approved accommodations in this class, please contact the instructor to discuss implementation of the accommodations. During remote instruction requirements due to COVID, communication and flexibility will be essential for success.
 
 \section*{Sexual Assault, Sexual Harassment, \& Gender Based Violence \& Discrimination}
-\paragraph{}UMBC Policy\footnote{\url{https://oei.umbc.edu/gender-discrimination-sexual-misconduct/}} and Federal law (Title IX) prohibit discrimination and harassment on the basis of sex, sexual orientation, and gender identity in University programs and activities. Any student who is impacted by sexual harassment, sexual assault, domestic violence, dating violence, stalking, sexual exploitation, gender discrimination, pregnancy discrimination, gender-based harassment or retaliation should contact the University’s Title IX Coordinator\footnote{\url{https://oei.umbc.edu/title-ix-coordinator/}} to make a report and/or access support and resources:
+\paragraph{}UMBC Policy\footnote{\url{https://ecr.umbc.edu/gender-discrimination-sexual-misconduct/}} in addition to federal and state law (to include Title IX) prohibits discrimination and harassment on the basis of sex, sexual orientation, and gender identity in University programs and activities. Any student who is impacted by sexual harassment, sexual assault, domestic violence, dating violence, stalking, sexual exploitation, gender discrimination, pregnancy discrimination, gender-based harassment, or related retaliation should contact the University’s Title IX Coordinator to make a report and/or access support and resources. The Title IX Coordinator can be reached at \href{mailto:titleixcoordinator@umbc.edu}{titleixcoordinator@umbc.edu} or \href{tel:+14104551717}{410-455-1717}.
+
+You can access support and resources even if you do not want to take any further action. You will not be forced to file a formal complaint or police report. Please be aware that the University may take action on its own if essential to protect the safety of the community.
+
+If you are interested in making a report, please use the \href{https://umbc-advocate.symplicity.com/titleix_report/index.php/pid364290?}{Online Reporting/Referral Form}.  Please note that, if you report anonymously, the University’s ability to respond will be limited.
+
+\subsection*{Notice that Faculty and Teaching Assistants are Responsible Employees with Mandatory Reporting Obligations}
+
+All faculty members and teaching assistants are considered Responsible Employees, per UMBC’s Policy on Sexual Misconduct, Sexual Harassment, and Gender Discrimination\footnote{\url{https://ecr.umbc.edu/policy-on-sexual-misconduct-sexual-harassment-and-gender-discrimination/}}. Faculty and teaching assistants therefore required to report all known information regarding alleged conduct that may be a violation of the Policy to the Title IX Coordinator, even if a student discloses an experience that occurred before attending UMBC and/or an incident that only involves people not affiliated with UMBC.  Reports are required regardless of the amount of detail provided and even in instances where support has already been offered or received.
+
+While faculty members want to encourage you to share information related to your life experiences through discussion and written work, students should understand that faculty are required to report past and present sexual harassment, sexual assault, domestic and dating violence, stalking, and gender discrimination that is shared with them to the Title IX Coordinator so that the University can inform students of their \href{https://ecr.umbc.edu/rights-and-resources/}{rights, resources, and support}.  While you are encouraged to do so, you are not obligated to respond to outreach conducted as a result of a report to the Title IX Coordinator.
+
+If you need to speak with someone in confidence, who does not have an obligation to report to the Title IX Coordinator, UMBC has a number of \href{https://ecr.umbc.edu/policy-on-sexual-misconduct-sexual-harassment-and-gender-discrimination/#confidential-resources}{Confidential Resources} available to support you:
 \begin{itemize}
-\item Mikhel A. Kushner, Title IX Coordinator (she/they)
-\item \href{tel:+14104551250}{(410) 455-1250} (direct line), \href{mailto:kushner@umbc.edu?Subject=Title\%20IX}{kushner@umbc.edu}
+    \item \href{https://health.umbc.edu/}{Retriever Integrated Health} (Main Campus): \href{tel:+14104552472}{410-455-2472}; Monday – Friday 8:30 a.m. – 5 p.m.; For After-Hours Support, Call \href{tel:988}{988}.
+    \item \href{https://shadygrove.umd.edu/student-affairs/counseling-well-being}{Center for Counseling and Well-Being} (Shady Grove Campus): \href{tel:+13017386273}{301-738-6273}; Monday-Thursday 10:00a.m. – 7:00 p.m. and Friday 10:00 a.m. – 2:00 p.m. (virtual) \href{https://shadygrove.titaniumhwc.com/}{Online Appointment Request Form}.
+    \item Pastoral Counseling via \href{https://i3b.umbc.edu/spaces/the-gathering-space-for-spiritual-well-being/}{The Gathering Space for Spiritual Well-Being}: \href{tel:+14104556795}{410-455-6795}; \href{mailto:i3b@umbc.edu}{i3b@umbc.edu}; Monday – Friday 8:00 a.m. – 10:00 p.m.
 \end{itemize}
 
-\paragraph{}You can access support and resources even if you do not want to take any further action. You will not be forced to file a formal complaint or police report. Please be aware that the University may take action on its own if essential to protect the safety of the community. If you are interested in or thinking about making a report, please use the Online Reporting/Referral Form. Please note that, if you report anonymously,  the University’s ability to respond will be limited.
+Other Resources:
+\begin{itemize}
+    \item \href{https://womenscenter.umbc.edu/}{Women`s Center} (open to students of all genders): \href{tel:+14104552714}{410-455-2714}; \href{mailto:womenscenter@umbc.edu}{womenscenter@umbc.edu}; Monday – Thursday 9:30 a.m. – 5:00 p.m. and Friday 10:00 a.m. – 4 p.m.
+    \item \href{https://ecr.umbc.edu/shady-grove-title-ix-resources/}{Shady Grove Student Resources}
+    \item \href{https://ecr.umbc.edu/maryland-resources/}{Maryland Resources}
+    \item \href{https://ecr.umbc.edu/national-resources/}{National Resources}
+\end{itemize}
+
+\section*{Child Abuse and Neglect\footnote{\url{https://ecr.umbc.edu/child-protection/}}}
+Please note that Maryland law and UMBC policy\footnote{\url{https://education.umbc.edu/child-abuse-reporting-policy//}} require that faculty report all disclosures or suspicions of child abuse or neglect to the Department of Social Services and/or the police even if the person who experienced the abuse or neglect is now over 18.
+
+\section*{Pregnant and Parenting Students}
+UMBC’s Policy on Sexual Misconduct, Sexual Harassment and Gender Discrimination\footnote{\url{https://ecr.umbc.edu/policy-on-sexual-misconduct-sexual-harassment-and-gender-discrimination/}} expressly prohibits all forms of discrimination and harassment on the basis of sex, including pregnancy. Resources for pregnant, parenting and breastfeeding students are available through the University’s \href{https://ecr.umbc.edu/students/}{Office of Equity and Civil Rights}.  Pregnant and parenting students are encouraged to contact the Title IX Coordinator to discuss plans and ensure ongoing access to their academic program with respect to a leave of absence – returning following leave, or any other accommodation that may be needed related to pregnancy, childbirth, adoption, breastfeeding, and/or the early months of parenting.
+
+In addition, students who are pregnant and have an impairment related to their pregnancy that qualifies as disability under the ADA may be entitled to accommodations through the \href{https://sds.umbc.edu/accommodations/registering-with-sds/}{Office of Student Disability Services}.
+
+\section*{Religious Observances \& Accommodations}
+UMBC Policy\footnote{\url{https://provost.umbc.edu/wp-content/uploads/sites/46/2022/08/Religious-Observance-Academic-Policy-2022_2023.pdf}} provides that students should not be penalized because of observances of their religious beliefs, and that students shall be given an opportunity, whenever feasible, to make up within a reasonable time any academic assignment that is missed due to individual participation in religious observances. It is the responsibility of the student to inform the instructor of any intended absences or requested modifications for religious observances in advance, and as early as possible. For questions or guidance regarding religious observances and accommodations, please contact the Office of Equity and Civil Rights at \href{mailto:ecr@umbc.edu}{ecr@umbc.edu}.
+
+\section*{Hate, Bias, Discrimination and Harassment}
+UMBC values safety, cultural and ethnic diversity, social responsibility, lifelong learning, equity, and civic engagement.
+
+Consistent with these principles, UMBC Policy\footnote{\url{https://ecr.umbc.edu/discrimination-and-bias/}} prohibits discrimination and harassment in its educational programs and activities or with respect to employment terms and conditions based on race, creed, color, religion, sex, gender, pregnancy, ancestry, age, gender identity or expression, national origin, veterans status, marital status, sexual orientation, physical or mental disability, or genetic information.
+
+Students (and faculty and staff) who experience discrimination, harassment, hate, or bias based upon a protected status or who have such matters reported to them should use the \href{https://umbc-advocate.symplicity.com/titleix_report/index.php/pid954154?}{online reporting/referral form} to report discrimination, hate, or bias incidents. You may report incidents that happen to you anonymously. Please note that, if you report anonymously, the University’s ability to respond may be limited.
 
 \section*{Resources to Help you Succeed}
-\paragraph{}Click on the following links for helpful resources:
-UMBC’s Academic Success Center (ASC) \url{https://academicsuccess.umbc.edu/} provides a range of resources to support students as they progress toward degree completion. They will continue to offer all of their services online. 
-The ASC has created a specialized set of Online Learning Resources \url{https://lrc.umbc.edu/online_learning/}, including videos and guides to help students succeed while learning online.
-In addition, check out the following resources:
+\paragraph{}UMBC’s Academic Success Center (ASC; \url{https://academicsuccess.umbc.edu/}) provides a range of resources to support students as they progress toward degree completion. Check out the following resources:
 
 \begin{itemize}
-\item Academic Success Center Resources \url{https://academicsuccess.umbc.edu/asc-business-continuity/} include: Online tutoring and writing support, supplemental instruction/peer-assisted study sessions (SI PASS), placement testing, FYI academic alerts, success courses, academic advocacy, academic policy and academic success meetings.
+\item Appointment Tutoring: The Academic Success Center offers free small group tutoring by appointment. Appointments can be scheduled online. To make an appointment, please visit \url{http://academicsuccess.umbc.edu/appointment-tutoring}
 
-\item Tutoring and Writing Center Appointments \url{https://lrc.umbc.edu/tutor/}b will be online; students can make appointments by going to \url{https://saml2.go-redrock.com/relay.php}.
+\item Computing Success Center: The Academic Success Center offers free drop-in tutoring for computer science courses through our Computing Success Center.\footnote{Though CMSC 104 is not specifically listed, any computer science tutor should be able to help with this course's content.}. 
+ To see the schedule for this course, please visit \url{http://academicsuccess.umbc.edu/computing-success-center}
 
-\item SI PASS \url{https://si.lrc.umbc.edu/} Supplemental Instruction (SI)/ Peer Assisted Study Sessions (PASS). The SI PASS program targets traditionally difficult academic courses, providing regularly scheduled, out-of-class review sessions, happening in Blackboard Collaborate inside your existing Blackboard course.
-
-\item Academic Advocates: Advocates work one-on-one with students who need support navigating academic and institutional challenges, no matter how complex the concerns (i.e., personal, academic, or financial). \url{https://academicadvocacy.umbc.edu/student-referrals/submit-a-referral/}
-
-\item Academic Success Meetings - Schedule a one-to-one virtual meeting with an Academic Success Center Professional who can help you with time management, study skills, and accessing campus resources. \url{https://lrc.umbc.edu/academic-success-meeting/}
+\item Academic Advocates: Advocates work one-on-one with students who need support navigating academic and institutional challenges, no matter how complex the concerns (i.e., personal, academic, or financial).  For more information, please visit \url{https://academicsuccess.umbc.edu/academic-advocacy/}
 
 \end{itemize}
 

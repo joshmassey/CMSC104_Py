@@ -62,13 +62,30 @@
 \usepackage[utf8]{inputenc}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt} % Remove default underline from header package
-\rhead{CMSC 104 Section 01: Classwork 2}
-%\rhead{}
-\lhead{\begin{picture}(0,0) \put(0,-10){\includegraphics[width=1.1cm]{../../Images/UMBC-vertical}} \end{picture}}
-\cfoot{\thepage}
-\rfoot{\input{../../semester}}
-\lfoot{CMSC 104 Section 01}
-\AtEndDocument{\vfill \footnotesize{Last modified: 28 July 2024}}
+% \rhead{CMSC 104 Section 01: Classwork 1}
+% %\rhead{}
+% \lhead{\begin{picture}(0,0) \put(0,-10){\includegraphics[width=1.1cm]{../../Images/UMBC-vertical}} \end{picture}}
+% \cfoot{\thepage}
+% \rfoot{\input{../../semester}}
+% \lfoot{CMSC 104 Section 01}
+\fancyhead[L]{
+    \makebox[\textwidth][s]{
+        \begin{picture}(0,15){\includegraphics[height=0.375in]{Images/UMBC-primary-logo-RGB.png}}
+        \end{picture}
+        \hspace{9.25cm} % Adjust space between image and text as needed
+        \shortstack[r]{CMSC 104 (Section 01): \\Problem Solving and Computer Programming}
+    }
+}
+\fancyfoot[C]{
+    \makebox[\textwidth][s]{
+        \thepage
+        \hspace{5cm}
+        \input{semester}
+        \hspace{5cm}
+        CMSC 104 (Section 01)
+    }
+}
+\AtEndDocument{\vfill \footnotesize{Last modified: \today}}
 \AtEndDocument{\rfoot{\input{../../semester}}}
 \renewcommand\thesubsection{\arabic{subsection}} % Show only subsection numbers, not section.subsection
 
@@ -77,8 +94,8 @@
     \textbf{Classwork 2: More Python Warm-Ups}
     \normalsize
     \\ ~~ \\
-    \textbf{In-class Date: Wednesday 11 September} \\
-    \textbf{Due Date: Tuesday 17 September}
+    \textbf{In-class Date: Thursday 12 September} \\
+    \textbf{Due Date: Wednesday 16 September}
     
     \section*{Objectives}
     \paragraph{}To continue getting used to writing Python code.
